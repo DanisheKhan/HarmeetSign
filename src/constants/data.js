@@ -43,7 +43,7 @@ export const featuredMusic = [
     title: "Baby Doll",
     movie: "Ragini MMS 2",
     year: 2014,
-    thumbnail: "/baby-doll-thumb.jpg",
+    thumbnail: "/imgs/img1.jpg",
     youtubeId: "yP9KiFTrWCU",
     description:
       "A chartbuster track that revolutionized the music industry with its unique sound.",
@@ -53,7 +53,7 @@ export const featuredMusic = [
     title: "Chittiyaan Kalaiyaan",
     movie: "Roy",
     year: 2015,
-    thumbnail: "/chittiyaan-kalaiyaan-thumb.jpg",
+    thumbnail: "/imgs/img2.jpg",
     youtubeId: "zpsVpnvFfZQ",
     description:
       "An upbeat dance number that topped the charts for weeks after its release.",
@@ -63,7 +63,7 @@ export const featuredMusic = [
     title: "OMG - Oh My God!",
     movie: "Satyameva Jayate 2",
     year: 2021,
-    thumbnail: "/omg-thumb.jpg",
+    thumbnail: "/imgs/img3.jpg",
     youtubeId: "3wZUjGqATEQ",
     description:
       "A high-energy track that combines traditional beats with modern music production.",
@@ -73,7 +73,7 @@ export const featuredMusic = [
     title: "Love Dose",
     movie: "Desi Kalakaar",
     year: 2014,
-    thumbnail: "/love-dose-thumb.jpg",
+    thumbnail: "/imgs/img4.jpg",
     youtubeId: "_iFrDMArBDg",
     description:
       "A romantic track that showcases Harmeet's versatility as a music composer.",
@@ -131,7 +131,7 @@ export const awards = [
     category: "Best Music Director",
     year: "2015",
     project: "Baby Doll - Ragini MMS 2",
-    image: "/filmfare-award.jpg",
+    image: "/imgs/img5.jpg",
   },
   {
     id: 2,
@@ -139,7 +139,7 @@ export const awards = [
     category: "Best Music Direction",
     year: "2016",
     project: "Chittiyaan Kalaiyaan - Roy",
-    image: "/iifa-award.jpg",
+    image: "/imgs/img6.jpg",
   },
   {
     id: 3,
@@ -147,7 +147,7 @@ export const awards = [
     category: "Best Music Director",
     year: "2014",
     project: "Various Works",
-    image: "/screen-award.jpg",
+    image: "/imgs/img7.jpg",
   },
   {
     id: 4,
@@ -155,41 +155,41 @@ export const awards = [
     category: "Music Excellence",
     year: "2019",
     project: "Contribution to Indian Cinema",
-    image: "/dadasaheb-phalke-award.jpg",
+    image: "/imgs/img1.jpg",
   },
 ];
 
 export const galleryImages = {
   concerts: [
-    { id: 1, src: "/concert-1.jpg", title: "Live at Mumbai, 2022" },
-    { id: 2, src: "/concert-2.jpg", title: "International Tour, London 2021" },
+    { id: 1, src: "/imgs/img1.jpg", title: "Live at Mumbai, 2022" },
+    { id: 2, src: "/imgs/img2.jpg", title: "International Tour, London 2021" },
     {
       id: 3,
-      src: "/concert-3.jpg",
+      src: "/imgs/img3.jpg",
       title: "Music Festival Performance, Delhi 2020",
     },
-    { id: 4, src: "/concert-4.jpg", title: "New Year Concert, Goa 2023" },
-    { id: 5, src: "/concert-5.jpg", title: "University Tour, Pune 2019" },
-    { id: 6, src: "/concert-6.jpg", title: "Corporate Event, Bangalore 2022" },
+    { id: 4, src: "/imgs/img4.jpg", title: "New Year Concert, Goa 2023" },
+    { id: 5, src: "/imgs/img5.jpg", title: "University Tour, Pune 2019" },
+    { id: 6, src: "/imgs/img6.jpg", title: "Corporate Event, Bangalore 2022" },
   ],
   studio: [
-    { id: 1, src: "/studio-1.jpg", title: 'Recording Session for "OMG"' },
-    { id: 2, src: "/studio-2.jpg", title: "Composing at Personal Studio" },
-    { id: 3, src: "/studio-3.jpg", title: "Collaboration with Neha Kakkar" },
-    { id: 4, src: "/studio-4.jpg", title: "Music Production Setup" },
-    { id: 5, src: "/studio-5.jpg", title: "Behind the Scenes - Song Writing" },
+    { id: 1, src: "/imgs/img7.jpg", title: 'Recording Session for "OMG"' },
+    { id: 2, src: "/imgs/img1.jpg", title: "Composing at Personal Studio" },
+    { id: 3, src: "/imgs/img2.jpg", title: "Collaboration with Neha Kakkar" },
+    { id: 4, src: "/imgs/img3.jpg", title: "Music Production Setup" },
+    { id: 5, src: "/imgs/img4.jpg", title: "Behind the Scenes - Song Writing" },
   ],
   backstage: [
     {
       id: 1,
-      src: "/backstage-1.jpg",
+      src: "/imgs/img5.jpg",
       title: "Preparing for Stage Performance",
     },
-    { id: 2, src: "/backstage-2.jpg", title: "Meet & Greet with Fans, Delhi" },
-    { id: 3, src: "/backstage-3.jpg", title: "With Team Before Concert" },
+    { id: 2, src: "/imgs/img6.jpg", title: "Meet & Greet with Fans, Delhi" },
+    { id: 3, src: "/imgs/img7.jpg", title: "With Team Before Concert" },
     {
       id: 4,
-      src: "/backstage-4.jpg",
+      src: "/imgs/img1.jpg",
       title: "Celebrity Interaction at Award Show",
     },
   ],

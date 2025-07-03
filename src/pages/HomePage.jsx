@@ -38,7 +38,7 @@ const HomePage = () => {
         {/* Video/Image Background with Overlay */}
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-          <div className="w-full h-full bg-[url('/concert-backdrop.jpg')] bg-cover bg-center bg-fixed z-0"></div>
+          <div className="w-full h-full bg-[url('/imgs/img1.jpg')] bg-cover bg-center bg-fixed z-0"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90 z-20"></div>
         </div>
 
@@ -165,7 +165,7 @@ const HomePage = () => {
       <section id="about" className="py-20 bg-[#0f0f0f] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none select-none">
           <img
-            src="/music-notes.png"
+            src="/imgs/img3.jpg"
             alt="Music Notes"
             className="w-full h-full object-cover"
             onError={(e) => { e.target.style.display = 'none'; }}
@@ -200,7 +200,7 @@ const HomePage = () => {
             >
               <div className="aspect-square bg-[#1a1a1a] rounded overflow-hidden">
                 <img
-                  src="/harmeet-meet-profile.jpg"
+                  src="/imgs/img2.jpg"
                   alt="Harmeet Meet"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -245,7 +245,7 @@ const HomePage = () => {
                 >
                   <div className="w-16 h-16 mb-4 bg-[#d4af37]/10 rounded-full flex items-center justify-center">
                     <img
-                      src={`/award-${index + 1}.png`}
+                      src="/imgs/img5.jpg"
                       alt={`Award ${index + 1}`}
                       className="w-10 h-10 object-contain"
                       onError={(e) => {
@@ -272,7 +272,7 @@ const HomePage = () => {
 
       {/* Social Impact Section */}
       <section id="impact" className="py-20 bg-[#0f0f0f] relative">
-        <div className="absolute inset-0 bg-[url('/impact-bg.jpg')] bg-cover bg-center opacity-20 pointer-events-none select-none"></div>
+        <div className="absolute inset-0 bg-[url('/imgs/img4.jpg')] bg-cover bg-center opacity-20 pointer-events-none select-none"></div>
         <div className="container-custom relative z-10">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
@@ -331,16 +331,15 @@ const HomePage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4">
                       <h4 className="text-white font-playfair text-lg">Gallery Image {index + 1}</h4>
-                      <p className="text-[#d4af37] text-sm">Concert Performance</p>
+                      <p className="text-[#d4af37]">Concert Performance</p>
                     </div>
                   </div>
                   <img
-                    src={`/gallery-${index + 1}.jpg`}
+                    src={`/imgs/img${(index % 7) + 1}.jpg`}
                     alt={`Gallery Image ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.target.onerror = null;
-                      // e.target.src = `https://via.placeholder.com/400x400?text=Gallery+${index + 1}`;
                     }}
                   />
                 </motion.div>
@@ -351,68 +350,6 @@ const HomePage = () => {
               className="text-center mt-12"
             >
               {buttonOutline('/gallery', 'View Full Gallery')}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section id="contact" className="py-20 bg-gradient-to-b from-[#0f0f0f] to-[#000000]">
-        <div className="container-custom">
-          <motion.div
-            variants={staggerContainer(0.1, 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            {sectionTitle('Get in', 'Touch')}
-            <motion.p
-              variants={textVariant(0.4)}
-              className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg"
-            >
-              For bookings, collaborations, or press inquiries, reach out to Harmeet Meet's team.
-              We're always looking for creative partners who share our passion for innovative music.
-            </motion.p>
-            <motion.div
-              variants={fadeIn('up', 0.5)}
-              className="flex justify-center gap-6 mb-10"
-            >
-              <a
-                href="https://instagram.com/harmeetmeet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-[#2d2d2d] flex items-center justify-center text-[#d4af37] hover:bg-[#d4af37] hover:text-[#0f0f0f] transition-all duration-300"
-              >
-                <FaInstagram size={20} />
-              </a>
-              <a
-                href="https://youtube.com/harmeetmeet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-[#2d2d2d] flex items-center justify-center text-[#d4af37] hover:bg-[#d4af37] hover:text-[#0f0f0f] transition-all duration-300"
-              >
-                <FaYoutube size={20} />
-              </a>
-              <a
-                href="https://twitter.com/harmeetmeet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-[#2d2d2d] flex items-center justify-center text-[#d4af37] hover:bg-[#d4af37] hover:text-[#0f0f0f] transition-all duration-300"
-              >
-                <FaTwitter size={20} />
-              </a>
-              <a
-                href="https://facebook.com/harmeetmeet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-[#2d2d2d] flex items-center justify-center text-[#d4af37] hover:bg-[#d4af37] hover:text-[#0f0f0f] transition-all duration-300"
-              >
-                <FaFacebook size={20} />
-              </a>
-            </motion.div>
-            <motion.div variants={fadeIn('up', 0.6)}>
-              {buttonPrimary('/contact', 'Contact Us')}
             </motion.div>
           </motion.div>
         </div>
