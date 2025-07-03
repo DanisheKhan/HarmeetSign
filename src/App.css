@@ -39,3 +39,32 @@ h6 {
   letter-spacing: 0.5px;
   transition: all 0.25s ease;
 }
+
+/* Mobile navigation */
+@media (max-width: 767px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Navbar styling */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d4af37;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active:after,
+.nav-link:hover:after {
+  width: 100%;
+}
