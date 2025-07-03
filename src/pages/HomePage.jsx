@@ -35,49 +35,73 @@ const HomePage = () => {
     >
       {/* Hero Section */}
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0c0c0c]">
-        <div className="absolute top-0 left-0 w-full h-full bg-black z-0">
-          <div className="w-full h-full bg-[url('/concert-backdrop.jpg')] bg-cover bg-center opacity-50"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 via-transparent to-black z-10"></div>
+        {/* Video/Image Background with Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full z-0">
+          <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+          <div className="w-full h-full bg-[url('/concert-backdrop.jpg')] bg-cover bg-center bg-fixed z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90 z-20"></div>
         </div>
+
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full z-10 opacity-10 pointer-events-none">
+          <div className="absolute top-[15%] left-[10%] w-32 h-32 border-2 border-[#d4af37]"></div>
+          <div className="absolute bottom-[15%] right-[10%] w-48 h-48 border-2 border-[#d4af37]"></div>
+        </div>
+
+        {/* Main Content */}
         <motion.div
           variants={staggerContainer(0.1, 0.2)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="container-custom relative z-20 text-center"
+          className="container-custom relative z-30 text-center"
         >
+          <motion.div
+            variants={fadeIn('down', 0.3)}
+            className="inline-block mb-4"
+          >
+            <div className="px-3 py-1 border-b-2 border-[#d4af37] inline-block">
+              <span className="text-sm tracking-widest text-[#d4af37] uppercase font-merriweather">Official Website</span>
+            </div>
+          </motion.div>
+
           <motion.h1
             variants={textVariant(0.2)}
-            className="text-white text-4xl md:text-5xl lg:text-6xl font-playfair mb-6"
+            className="text-white text-5xl md:text-6xl lg:text-7xl font-playfair mb-6 tracking-tight"
           >
             <span className="font-light">Harmeet</span> <span className="text-[#d4af37]">Meet</span>
           </motion.h1>
+
+          <motion.div className="w-24 h-1 bg-[#d4af37] mx-auto mb-6"></motion.div>
+
           <motion.p
             variants={textVariant(0.4)}
-            className="text-lg md:text-xl font-merriweather text-gray-200 max-w-2xl mx-auto mb-8"
+            className="text-xl md:text-2xl font-merriweather text-gray-200 max-w-2xl mx-auto mb-12"
           >
             Composer. Performer. Visionary.
           </motion.p>
+
           <motion.div
             variants={fadeIn('up', 0.6)}
-            className="flex flex-wrap justify-center gap-4"
+            className="flex flex-wrap justify-center gap-6"
           >
             {buttonPrimary('#about', 'Discover Journey')}
             <a
               href="#music"
-              className="px-8 py-3 border border-[#d4af37] text-[#d4af37] font-bold rounded-md hover:bg-[#d4af37] hover:text-[#0c0c0c] transition-colors duration-200 flex items-center"
+              className="px-8 py-3 border-2 border-[#d4af37] text-[#d4af37] font-medium rounded hover:bg-[#d4af37] hover:text-[#0c0c0c] transition-all duration-300 flex items-center"
             >
               <FaPlay className="mr-2" /> Listen Now
             </a>
           </motion.div>
-          <motion.div
+
+          {/* <motion.div
             variants={fadeIn('up', 0.8)}
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
           >
-            <div className="animate-bounce">
-              <FaChevronDown className="text-white text-2xl" />
-            </div>
-          </motion.div>
+            <a href="#music" className="w-12 h-12 rounded-full border border-[#d4af37] flex items-center justify-center hover:bg-[#d4af37] hover:text-[#0c0c0c] text-white transition-all duration-300">
+              <FaChevronDown className="text-lg animate-bounce" />
+            </a>
+          </motion.div> */}
         </motion.div>
       </section>
 
@@ -109,7 +133,7 @@ const HomePage = () => {
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = 'https://via.placeholder.com/480x270?text=Harmeet+Meet';
+                        // e.target.src = 'https://via.placeholder.com/480x270?text=Harmeet+Meet';
                       }}
                     />
                   </div>
@@ -181,7 +205,7 @@ const HomePage = () => {
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = 'https://via.placeholder.com/600x600?text=Harmeet+Meet';
+                    // e.target.src = 'https://via.placeholder.com/600x600?text=Harmeet+Meet';
                   }}
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6">
@@ -226,7 +250,7 @@ const HomePage = () => {
                       className="w-10 h-10 object-contain"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = 'https://via.placeholder.com/100?text=🏆';
+                        // e.target.src = 'https://via.placeholder.com/100?text=🏆';
                       }}
                     />
                   </div>
@@ -316,7 +340,7 @@ const HomePage = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = `https://via.placeholder.com/400x400?text=Gallery+${index + 1}`;
+                      // e.target.src = `https://via.placeholder.com/400x400?text=Gallery+${index + 1}`;
                     }}
                   />
                 </motion.div>
