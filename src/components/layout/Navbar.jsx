@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaMusic, FaBars, FaTimes } from 'react-icons/fa';
 import { headerVariants } from '../../constants/motion';
@@ -64,16 +64,16 @@ const Navbar = () => {
                 <Link
                   to={link.path}
                   className={`relative px-4 py-2 font-inter text-base font-medium uppercase tracking-wider transition-colors duration-300 lg:block lg:w-full lg:py-4 lg:px-0 ${activeSection === link.path.slice(1) || (link.path === '/' && activeSection === 'home')
-                      ? 'text-[#d4af37]'
-                      : 'text-[#b3b3b3] hover:text-white'
+                    ? 'text-[#d4af37]'
+                    : 'text-[#b3b3b3] hover:text-white'
                     }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.title}
                   <motion.div
                     className={`absolute h-[2px] bg-[#d4af37] transition-all duration-300 left-0 bottom-[-5px] lg:left-1/2 lg:bottom-[5px] lg:transform lg:translate-x-[-50%] ${activeSection === link.path.slice(1) || (link.path === '/' && activeSection === 'home')
-                        ? 'lg:w-[30px]'
-                        : 'lg:w-0'
+                      ? 'lg:w-[30px]'
+                      : 'lg:w-0'
                       }`}
                     initial={{ width: '0%' }}
                     animate={{
