@@ -28,10 +28,14 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Background with gradient overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-zinc-950 z-0">
+        <div className="absolute inset-0 bg-zinc-950 z-0">
           {/* Dark gradient overlay on background */}
-          <div className="w-full h-full bg-gradient-to-r from-zinc-950 to-zinc-900 opacity-90"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/imgs/img2.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 to-zinc-900 opacity-90 z-0"></div>
+          <img
+            src="/imgs/img2.jpg"
+            alt="Background"
+            className="absolute inset-0 w-full h-full object-cover opacity-30 z-0 mix-blend-overlay"
+          />
         </div>
 
         {/* Content */}
@@ -222,7 +226,7 @@ const AboutPage = () => {
       </section>
 
       {/* Musical Style Section */}
-      <section className="py-16 md:py-24 bg-[#161616]">
+      <section className="py-16 md:py-24 bg-zinc-900">
         <div className="mx-auto max-w-screen-xl px-6">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
@@ -296,7 +300,14 @@ const AboutPage = () => {
 
       {/* Social Impact Section */}
       <section className="py-16 md:py-24 bg-zinc-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/imgs/img14.webp')] bg-cover bg-fixed bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 to-zinc-900 opacity-90"></div>
+        <div className="absolute inset-0 opacity-10">
+          <img
+            src="/imgs/img14.webp"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="mx-auto max-w-screen-xl px-6 relative z-10">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
