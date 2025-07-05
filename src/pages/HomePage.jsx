@@ -54,7 +54,7 @@ const HomePage = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="container-custom relative z-30 text-center"
+          className="mx-auto max-w-screen-xl px-6 relative z-30 text-center"
         >
           <motion.div
             variants={fadeIn('down', 0.3)}
@@ -93,21 +93,12 @@ const HomePage = () => {
               <FaPlay className="mr-2" /> Listen Now
             </a>
           </motion.div>
-
-          {/* <motion.div
-            variants={fadeIn('up', 0.8)}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          >
-            <a href="#music" className="w-12 h-12 rounded-full border border-[#d4af37] flex items-center justify-center hover:bg-[#d4af37] hover:text-[#0c0c0c] text-white transition-all duration-300">
-              <FaChevronDown className="text-lg animate-bounce" />
-            </a>
-          </motion.div> */}
         </motion.div>
       </section>
 
       {/* Featured Music Section */}
       <section id="music" className="py-20 bg-[#0c0c0c]">
-        <div className="container-custom">
+        <div className="mx-auto max-w-screen-xl px-6">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"
@@ -168,7 +159,7 @@ const HomePage = () => {
             aspectRatio=""
           />
         </div>
-        <div className="container-custom relative z-10">
+        <div className="mx-auto max-w-screen-xl px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -214,7 +205,7 @@ const HomePage = () => {
 
       {/* Awards & Recognition Section */}
       <section id="awards" className="py-20 bg-[#0a0a0a]">
-        <div className="container-custom">
+        <div className="mx-auto max-w-screen-xl px-6">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"
@@ -271,7 +262,7 @@ const HomePage = () => {
             aspectRatio=""
           />
         </div>
-        <div className="container-custom relative z-10">
+        <div className="mx-auto max-w-screen-xl px-6 relative z-10">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"
@@ -308,7 +299,7 @@ const HomePage = () => {
 
       {/* Gallery Preview */}
       <section id="gallery" className="py-20 bg-[#0a0a0a]">
-        <div className="container-custom">
+        <div className="mx-auto max-w-screen-xl px-6">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"

@@ -39,7 +39,7 @@ const AboutPage = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="container-custom relative z-20 text-center"
+          className="mx-auto max-w-screen-xl px-6 relative z-20 text-center"
         >
           <motion.h1
             variants={textVariant(0.2)}
@@ -59,7 +59,7 @@ const AboutPage = () => {
 
       {/* Early Life Section */}
       <section className="py-16 md:py-24 bg-[#0c0c0c]">
-        <div className="container-custom">
+        <div className="mx-auto max-w-screen-xl px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               variants={fadeIn('right', 0.2)}
@@ -97,7 +97,7 @@ const AboutPage = () => {
       {/* Journey Section */}
       <section className="py-16 md:py-24 bg-[#161616] relative overflow-hidden">
         <div className="spotlight"></div>
-        <div className="container-custom relative z-10">
+        <div className="mx-auto max-w-screen-xl px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               variants={fadeIn('right', 0.2)}
@@ -136,7 +136,7 @@ const AboutPage = () => {
 
       {/* Timeline Section */}
       <section className="py-16 md:py-24 bg-[#0c0c0c]">
-        <div className="container-custom">
+        <div className="mx-auto max-w-screen-xl px-6">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"
@@ -210,7 +210,7 @@ const AboutPage = () => {
 
       {/* Musical Style Section */}
       <section className="py-16 md:py-24 bg-[#161616]">
-        <div className="container-custom">
+        <div className="mx-auto max-w-screen-xl px-6">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"
@@ -278,7 +278,7 @@ const AboutPage = () => {
       {/* Social Impact Section */}
       <section className="py-16 md:py-24 bg-[#0c0c0c] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/social-impact-bg.jpg')] bg-cover bg-fixed bg-center opacity-10"></div>
-        <div className="container-custom relative z-10">
+        <div className="mx-auto max-w-screen-xl px-6 relative z-10">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"

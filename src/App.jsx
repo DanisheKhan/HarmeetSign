@@ -3,8 +3,8 @@ import { AnimatePresence } from 'framer-motion';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import NotFoundPage from './pages/NotFoundPage';
 import ScrollToTop from './components/ui/ScrollToTop';
-// import './styles/global.css';
 import './App.css';
 
 function App() {
@@ -16,10 +16,12 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="about" element={<AboutPage />} />
-            {/* Add additional routes here when pages are created */}
-            <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-              <h1 className="text-4xl font-playfair text-white">Page Not Found</h1>
-            </div>} />
+            {/* Placeholder routes - these will redirect to NotFoundPage until implemented */}
+            <Route path="music" element={<NotFoundPage />} />
+            <Route path="awards" element={<NotFoundPage />} />
+            <Route path="gallery" element={<NotFoundPage />} />
+            <Route path="contact" element={<NotFoundPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </AnimatePresence>
