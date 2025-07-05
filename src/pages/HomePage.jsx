@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FaPlay, FaSpotify, FaYoutube, FaChevronDown, FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 import { fadeIn, staggerContainer, textVariant } from '../constants/motion';
 import { featuredMusic } from '../constants/data';
+import { ImageContainer } from '../components/ui';
 
 const sectionTitle = (main, accent) => (
   <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-playfair text-white mb-6">
@@ -34,11 +35,10 @@ const HomePage = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Hero Section */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0c0c0c]">
-        {/* Video/Image Background with Overlay */}
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0c0c0c] to-[#1a1a1a]">
+        {/* Background with gradient overlay */}
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-          <div className="w-full h-full bg-[url('/imgs/img1.jpg')] bg-cover bg-center bg-fixed z-0"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90 z-20"></div>
         </div>
 
@@ -123,19 +123,16 @@ const HomePage = () => {
                   variants={fadeIn('up', 0.2 * (index + 1))}
                   className="bg-[#2d2d2d] rounded p-6 flex flex-col"
                 >
-                  <div className="relative aspect-video mb-4 overflow-hidden rounded">
-                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-                      <FaPlay className="text-[#d4af37] text-4xl" />
-                    </div>
-                    <img
+                  <div className="relative mb-4 group cursor-pointer">
+                    <ImageContainer
                       src={track.thumbnail}
                       alt={track.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        // e.target.src = 'https://via.placeholder.com/480x270?text=Harmeet+Meet';
-                      }}
+                      aspectRatio="aspect-video"
+                      hover={true}
                     />
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <FaPlay className="text-[#d4af37] text-4xl" />
+                    </div>
                   </div>
                   <h3 className="text-xl font-playfair text-white mb-1">{track.title}</h3>
                   <p className="text-sm text-gray-400 mb-2">{track.movie} ({track.year})</p>
@@ -164,11 +161,11 @@ const HomePage = () => {
       {/* About Section */}
       <section id="about" className="py-20 bg-[#0f0f0f] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none select-none">
-          <img
+          <ImageContainer
             src="/imgs/img3.jpg"
-            alt="Music Notes"
-            className="w-full h-full object-cover"
-            onError={(e) => { e.target.style.display = 'none'; }}
+            alt="Background pattern"
+            className="h-full"
+            aspectRatio=""
           />
         </div>
         <div className="container-custom relative z-10">
@@ -198,21 +195,18 @@ const HomePage = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-square bg-[#1a1a1a] rounded overflow-hidden">
-                <img
-                  src="/imgs/img2.jpg"
-                  alt="Harmeet Meet"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    // e.target.src = 'https://via.placeholder.com/600x600?text=Harmeet+Meet';
-                  }}
-                />
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6">
+              <ImageContainer
+                src="/imgs/img2.jpg"
+                alt="Harmeet Meet"
+                aspectRatio="aspect-square"
+                hover={true}
+                overlay="bg-gradient-to-t from-black to-transparent"
+              >
+                <div className="p-6">
                   <h3 className="text-2xl font-playfair text-white">Harmeet Meet</h3>
                   <p className="text-[#d4af37]">Music Director & Composer</p>
                 </div>
-              </div>
+              </ImageContainer>
             </motion.div>
           </div>
         </div>
@@ -243,15 +237,12 @@ const HomePage = () => {
                   variants={fadeIn('up', 0.2 * (index + 1))}
                   className="w-64 h-64 bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] rounded p-6 flex flex-col items-center justify-center text-center transform transition-transform hover:scale-105"
                 >
-                  <div className="w-16 h-16 mb-4 bg-[#d4af37]/10 rounded-full flex items-center justify-center">
-                    <img
+                  <div className="w-16 h-16 mb-4 bg-[#d4af37]/10 rounded-full flex items-center justify-center overflow-hidden">
+                    <ImageContainer
                       src="/imgs/img5.jpg"
                       alt={`Award ${index + 1}`}
-                      className="w-10 h-10 object-contain"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        // e.target.src = 'https://via.placeholder.com/100?text=🏆';
-                      }}
+                      className="w-12 h-12"
+                      borderRadius="rounded-full"
                     />
                   </div>
                   <h3 className="text-white font-playfair text-lg mb-2">{award.name}</h3>
@@ -272,7 +263,14 @@ const HomePage = () => {
 
       {/* Social Impact Section */}
       <section id="impact" className="py-20 bg-[#0f0f0f] relative">
-        <div className="absolute inset-0 bg-[url('/imgs/img4.jpg')] bg-cover bg-center opacity-20 pointer-events-none select-none"></div>
+        <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
+          <ImageContainer
+            src="/imgs/img4.jpg"
+            alt="Impact background"
+            className="h-full"
+            aspectRatio=""
+          />
+        </div>
         <div className="container-custom relative z-10">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
@@ -334,13 +332,10 @@ const HomePage = () => {
                       <p className="text-[#d4af37]">Concert Performance</p>
                     </div>
                   </div>
-                  <img
+                  <ImageContainer
                     src={`/imgs/img${(index % 7) + 1}.jpg`}
                     alt={`Gallery Image ${index + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                    }}
+                    hover={true}
                   />
                 </motion.div>
               ))}
