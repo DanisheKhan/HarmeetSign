@@ -149,29 +149,33 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-zinc-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 to-zinc-900 z-0"></div>
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none select-none z-0">
+      <section id="about" className="py-20 bg-zinc-950 relative overflow-hidden">
+        {/* Enhanced background with stronger gradient overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/95 to-zinc-900/95 z-0"></div>
+        {/* Background image with reduced opacity for less distraction */}
+        <div className="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none select-none z-0">
           <img
             src="/imgs/img3.jpg"
             alt="Background pattern"
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="mx-auto max-w-screen-xl px-6 relative z-10">
+        {/* Content container with improved spacing */}
+        <div className="mx-auto max-w-screen-xl px-6 py-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               variants={fadeIn('left', 0.3)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
+              className="bg-zinc-950/80 p-6 rounded-lg backdrop-blur-sm"
             >
               {sectionTitle('The', 'Journey')}
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-200 mb-6 text-lg">
                 From the musical roots of Gwalior to the glamorous studios of Mumbai, Harmeet Meet's
                 journey is a testament to passion, perseverance, and musical innovation.
               </p>
-              <p className="text-gray-400 mb-8">
+              <p className="text-gray-300 mb-8 text-lg">
                 Educated at The Scindia School and later at Sydenham College, Mumbai,
                 his classical training combined with contemporary sensibilities has created a unique
                 musical identity that resonates across generations.
@@ -190,11 +194,13 @@ const HomePage = () => {
                 alt="Harmeet Meet"
                 aspectRatio="aspect-square"
                 hover={true}
-                overlay="bg-gradient-to-t from-black to-transparent"
+                borderRadius="rounded-lg"
+                className="shadow-xl shadow-amber-400/10"
+                overlay="bg-gradient-to-t from-black via-black/70 to-transparent"
               >
-                <div className="p-6">
-                  <h3 className="text-2xl font-playfair text-white">Harmeet Meet</h3>
-                  <p className="text-amber-400">Music Director & Composer</p>
+                <div className="p-8 absolute bottom-0 w-full">
+                  <h3 className="text-2xl font-playfair text-white font-bold tracking-wide">Harmeet Meet</h3>
+                  <p className="text-amber-400 font-medium">Music Director & Composer</p>
                 </div>
               </ImageContainer>
             </motion.div>
