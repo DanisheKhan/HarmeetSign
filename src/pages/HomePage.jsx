@@ -3,6 +3,10 @@ import { FaPlay, FaSpotify, FaYoutube, FaChevronDown, FaInstagram, FaTwitter, Fa
 import { fadeIn, staggerContainer, textVariant } from '../constants/motion';
 import { featuredMusic } from '../constants/data';
 import { ImageContainer } from '../components/ui';
+import { FlipWords } from "../components/ui/FlipWords";
+
+
+const words = ["Composer", "Performer"," Innovator", "Visionary", "Legend", "Icon", "Maestro"];
 
 const sectionTitle = (main, accent) => (
   <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-playfair text-white mb-6">
@@ -77,7 +81,9 @@ const HomePage = () => {
             variants={textVariant(0.4)}
             className="text-xl md:text-2xl font-merriweather text-gray-200 max-w-2xl mx-auto mb-12"
           >
-            Composer. Performer. Visionary.
+            <div >
+              <FlipWords words={words} />
+            </div>
           </motion.p>
 
           <motion.div
