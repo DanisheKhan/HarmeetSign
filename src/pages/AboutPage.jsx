@@ -88,7 +88,13 @@ const AboutPage = () => {
             >
               {/* Early life image */}
               <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
-                <div className="w-full h-full bg-[url('/imgs/img3.jpg')] bg-cover bg-center"></div>
+                <ImageContainer
+                  src="/imgs/img3.jpg"
+                  alt="Harmeet Singh's Early Years"
+                  aspectRatio="aspect-auto"
+                  className="h-full"
+                  hover={true}
+                />
               </div>
             </motion.div>
           </div>
@@ -311,19 +317,47 @@ const AboutPage = () => {
             ></motion.div>
           </motion.div>
 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <motion.div
+              variants={fadeIn('right', 0.3)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="text-left"
+            >
+              <div className="space-y-4 text-zinc-300">
+                {aboutContent.socialImpact.split('\n\n').map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn('left', 0.3)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              {/* Social Impact image */}
+              <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
+                <ImageContainer
+                  src="/imgs/img13.webp"
+                  alt="Harmeet Singh's Social Impact"
+                  aspectRatio="aspect-auto"
+                  className="h-full"
+                  hover={true}
+                />
+              </div>
+            </motion.div>
+          </div>
+
           <motion.div
-            variants={fadeIn('up', 0.3)}
+            variants={fadeIn('up', 0.4)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center"
+            className="text-center"
           >
-            <div className="space-y-4 text-zinc-300">
-              {aboutContent.socialImpact.split('\n\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
-
             <div className="mt-12">
               <a
                 href="#"

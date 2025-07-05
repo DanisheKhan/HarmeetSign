@@ -39,8 +39,6 @@ const HomePage = () => {
         {/* Background with gradient overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-zinc-950 z-0">
           {/* Dark gradient overlay on background */}
-          <div className="w-full h-full bg-gradient-to-r from-zinc-950 to-zinc-900 opacity-90"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/imgs/img1.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
         </div>
 
         {/* Decorative elements */}
