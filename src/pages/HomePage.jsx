@@ -161,11 +161,10 @@ const HomePage = () => {
       {/* About Section */}
       <section id="about" className="py-20 bg-zinc-950 relative overflow-hidden">
         {/* Enhanced background with stronger gradient overlay for better text visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/95 to-zinc-900/95 z-0"></div>
+        <div className="absolute inset-0  z-0"></div>
         {/* Background image with reduced opacity for less distraction */}
         <div className="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none select-none z-0">
           <img
-            src="/imgs/img3.jpg"
             alt="Background pattern"
             className="h-full w-full object-cover"
           />

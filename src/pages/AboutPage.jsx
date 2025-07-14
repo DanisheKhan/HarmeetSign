@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { pageTransition, fadeIn, staggerContainer, textVariant } from '../constants/motion';
-import { aboutContent, careerTimeline, quotes } from '../constants/data';
+import { aboutContent, careerTimeline, quotes, ventures } from '../constants/data';
 import { MdMusicNote, MdGroups, MdStar, MdTrendingUp, MdPerson, MdPublic } from 'react-icons/md';
 import { ImageContainer } from '../components/ui';
 
@@ -26,11 +26,11 @@ const AboutPage = () => {
       exit="exit"
     >
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[100vh] flex items-center justify-center overflow-hidden">
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 bg-zinc-950 z-0">
           {/* Dark gradient overlay on background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 to-zinc-900 opacity-90 z-0"></div>
+          <div className="absolute inset-0  opacity-90 z-0"></div>
           <img
             src="/imgs/img2.jpg"
             alt="Background"
@@ -73,7 +73,7 @@ const AboutPage = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-playfair mb-6">
-                The <span className="text-amber-400">Early</span> Years
+                <span className="text-amber-400">The Early Years</span>
               </h2>
               <div className="w-24 h-1 bg-amber-400 mb-8"></div>
 
@@ -93,7 +93,7 @@ const AboutPage = () => {
               {/* Early life image */}
               <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <ImageContainer
-                  src="/imgs/img3.jpg"
+                  src="/public/HImgs/img20.png"
                   alt="Harmeet Singh's Early Years"
                   aspectRatio="aspect-auto"
                   className="h-full"
@@ -120,7 +120,7 @@ const AboutPage = () => {
               {/* Journey image */}
               <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <ImageContainer
-                  src="/imgs/img4.jpg"
+                  src="/public/HImgs/img21.png"
                   alt="Harmeet Singh's Journey"
                   aspectRatio="aspect-auto"
                   className="h-full"
@@ -137,7 +137,7 @@ const AboutPage = () => {
               className="order-1 lg:order-2"
             >
               <h2 className="text-3xl md:text-4xl font-playfair mb-6">
-                The <span className="text-amber-400">Journey</span>
+                <span className="text-amber-400"> The Journey</span>
               </h2>
               <div className="w-24 h-1 bg-amber-400 mb-8"></div>
 
@@ -165,7 +165,7 @@ const AboutPage = () => {
               variants={textVariant(0.1)}
               className="text-3xl md:text-4xl font-playfair mb-4"
             >
-              Career <span className="text-amber-400">Timeline</span>
+              <span className="text-amber-400"> Career Timeline</span>
             </motion.h2>
             <motion.div
               variants={fadeIn('up', 0.2)}
@@ -225,8 +225,8 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Musical Style Section */}
-      <section className="py-16 md:py-24 bg-zinc-900">
+      {/* Current Ventures Section */}
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-screen-xl px-6">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
@@ -239,7 +239,7 @@ const AboutPage = () => {
               variants={textVariant(0.1)}
               className="text-3xl md:text-4xl font-playfair mb-4"
             >
-              Musical <span className="text-amber-400">Style</span>
+              <span className="text-amber-400">Current Ventures</span>
             </motion.h2>
             <motion.div
               variants={fadeIn('up', 0.2)}
@@ -247,63 +247,94 @@ const AboutPage = () => {
             ></motion.div>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div
-              variants={fadeIn('right', 0.2)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              className="space-y-4 text-zinc-300"
-            >
-              {aboutContent.musicStyle.split('\n\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </motion.div>
-
-            <motion.div
-              variants={fadeIn('left', 0.2)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
-              {/* Musical Style image */}
-              <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
-                <ImageContainer
-                  src="/imgs/img6.jpg"
-                  alt="Harmeet Singh's Musical Style"
-                  aspectRatio="aspect-auto"
-                  className="h-full"
-                  hover={true}
-                />
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Quotes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {quotes.map((quote, index) => (
+            {ventures.slice(0, 3).map((venture) => (
               <motion.div
-                key={index}
-                variants={fadeIn('up', 0.2 + index * 0.1)}
+                key={venture.id}
+                variants={fadeIn('up', 0.2 * venture.id)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="bg-zinc-950 p-8 rounded-lg border-l-4 border-amber-400 shadow-xl"
+                className="bg-zinc-950 rounded-lg overflow-hidden"
               >
-                <blockquote className="text-white italic mb-4 text-lg">"{quote.quote}"</blockquote>
-                <cite className="text-amber-400 block text-sm">— {quote.source}</cite>
+                <div className="h-64 bg-zinc-900 flex items-center justify-center p-6">
+                  <img
+                    src={venture.logo}
+                    alt={venture.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-bold mb-1">{venture.name} - <span className="text-amber-400">{venture.role}</span></h3>
+                  <p className="text-amber-400 font-medium mb-4">{venture.timeframe}</p>
+                  <p className="text-zinc-300 text-sm">{venture.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            {ventures.slice(3, 6).map((venture) => (
+              <motion.div
+                key={venture.id}
+                variants={fadeIn('up', 0.2 * (venture.id - 3))}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="bg-zinc-950 rounded-lg overflow-hidden"
+              >
+                <div className="h-64 bg-zinc-900 flex items-center justify-center p-6">
+                  <img
+                    src={venture.logo}
+                    alt={venture.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-bold mb-1">{venture.name} - <span className="text-amber-400">{venture.role}</span></h3>
+                  <p className="text-amber-400 font-medium mb-4">{venture.timeframe}</p>
+                  <p className="text-zinc-300 text-sm">{venture.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            {ventures.slice(6).map((venture) => (
+              <motion.div
+                key={venture.id}
+                variants={fadeIn('up', 0.2 * (venture.id - 6))}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="bg-zinc-950 rounded-lg overflow-hidden"
+              >
+                <div className="h-64 bg-zinc-900 flex items-center justify-center p-6">
+                  <img
+                    src={venture.logo}
+                    alt={venture.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-bold mb-1">{venture.name} - <span className="text-amber-400">{venture.role}</span></h3>
+                  <p className="text-amber-400 font-medium mb-4">{venture.timeframe}</p>
+                  <p className="text-zinc-300 text-sm">{venture.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+
+
       {/* Social Impact Section */}
       <section className="py-16 md:py-24 bg-zinc-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 to-zinc-900 opacity-90"></div>
         <div className="absolute inset-0 opacity-10">
           <img
-            src="/imgs/img14.webp"
+            src="/public/HImgs/img13.webp"
             alt="Background"
             className="w-full h-full object-cover"
           />
@@ -352,10 +383,11 @@ const AboutPage = () => {
               {/* Social Impact image */}
               <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <ImageContainer
-                  src="/imgs/img13.webp"
+                  src="/public/HImgs/img18.png"
+
                   alt="Harmeet Singh's Social Impact"
                   aspectRatio="aspect-auto"
-                  className="h-full"
+                  className="h-full object-top"
                   hover={true}
                 />
               </div>

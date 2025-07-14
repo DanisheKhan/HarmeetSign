@@ -182,9 +182,17 @@ export const galleryImages = {
     { id: 1, src: "/HImgs/img1.jpg", title: "Live at Mumbai, 2022" },
     { id: 3, src: "/HImgs/img3.jpg", title: "Recording Session, 2020" },
     { id: 4, src: "/HImgs/img4.jpg", title: "Award Ceremony, 2019" },
-    { id: 5, src: "/HImgs/img5.jpg", title: "Collaboration with Artists, 2018" },
+    {
+      id: 5,
+      src: "/HImgs/img5.jpg",
+      title: "Collaboration with Artists, 2018",
+    },
     { id: 7, src: "/HImgs/img7.jpg", title: "Behind the Scenes, 2016" },
-    { id: 6, src: "/HImgs/img6.jpg", title: "Music Festival Performance, 2017" },
+    {
+      id: 6,
+      src: "/HImgs/img6.jpg",
+      title: "Music Festival Performance, 2017",
+    },
     { id: 8, src: "/HImgs/img8.webp", title: "Fan Meet and Greet, 2015" },
   ],
 };
@@ -204,6 +212,89 @@ export const quotes = [
     quote:
       "From classical training to modern production techniques, my journey has been about bridging worlds through sound.",
     source: "Harmeet Meet, TEDx Talk, 2022",
+  },
+];
+
+export const ventures = [
+  {
+    id: 1,
+    name: "Artistic Talent Management",
+    logo: "/public/logos/img10.png",
+    role: "Founder & CEO",
+    timeframe: "2022 - Present",
+    description:
+      "A premier talent management agency representing actors, the Marathi film and theatre talents and singers shaping the entertainment industry. Offering comprehensive casting, and career management in film, television, commercials, and more.",
+  },
+  {
+    id: 2,
+    name: "Buzaar Entertainment",
+    logo: "/public/logos/img9.png",
+    role: "Co-Founder (with Samrat & Mahmeet)",
+    timeframe: "2023 - Present",
+    description:
+      "Specializing in celebrity brand endorsements, in-film branding, and electronic sponsorships for corporate and entertainment clients.",
+  },
+  {
+    id: 3,
+    name: "Radiant Expedition",
+    logo: "/public/logos/img2.png",
+    role: "Co-Founder (with Mahmeet)",
+    timeframe: "2015 - Present",
+    description:
+      "A luxury travel and hospitality brand offering personalized experiences, including curated travel packages, event planning, ticketing, VISA services, and more.",
+  },
+  {
+    id: 4,
+    name: "MBMA PRIVATE LIMITED",
+    logo: "/public/logos/img6.png",
+    role: "Founder",
+    timeframe: "2022 - Present",
+    description:
+      "Mbma Private Limited is an unlisted private company incorporated on 07 July, 2021. It is classified as a private limited company and is located in Mumbai City.",
+  },
+  {
+    id: 5,
+    name: "Connecting Dots",
+    logo: "/public/logos/img8.png",
+    role: "Co-Founder with Manmeet Singh",
+    timeframe: "YET",
+    description:
+      "Building strategic alliances and partnerships to help businesses achieve ambitious goals.",
+  },
+  {
+    id: 6,
+    name: "Yantra Films",
+    logo: "/public/logos/img1.png",
+    role: "Co-Founder with Manmeet Singh, Anjali Bhushan, Anavi Bhushan Nuppal",
+    timeframe: "YET",
+    description:
+      "Yantra produces diverse film, web series, and animation content for India's booming entertainment market, capitalizing on streaming's growth.",
+  },
+  {
+    id: 7,
+    name: "LIVE 101",
+    logo: "/public/logos/img3.jpeg",
+    role: "Director",
+    timeframe: "YET",
+    description: "Artist booking platform with a database of +10000 artists.",
+  },
+  {
+    id: 8,
+    name: "MB Corp",
+    logo: "/public/logos/img4.png",
+    role: "Co-Founder with Manmeet Singh",
+    timeframe: "2005 - Present",
+    description:
+      "MB Corp is a universe which consists of a group of companies that help create and develop talent and content for the field of music and entertainment.",
+  },
+  {
+    id: 9,
+    name: "MB MUSIC",
+    logo: "/public/logos/img5.jpg",
+    role: "Co-Founder with Manmeet Singh",
+    timeframe: "YET",
+    description:
+      "Music label focusing on non Bollywood music with established and upcoming talents.",
   },
 ];
 
