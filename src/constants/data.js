@@ -3,9 +3,6 @@
 export const navLinks = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
-  { title: "Music", path: "/music" },
-  { title: "Awards", path: "/awards" },
-  { title: "Gallery", path: "/gallery" },
   { title: "Contact", path: "/contact" },
 ];
 
@@ -43,7 +40,7 @@ export const featuredMusic = [
     title: "Baby Doll",
     movie: "Ragini MMS 2",
     year: 2014,
-    thumbnail: "/imgs/img1.jpg",
+    thumbnail: "/public/iconicMusic/img6.jpg",
     youtubeId: "yP9KiFTrWCU",
     description:
       "A chartbuster track that revolutionized the music industry with its unique sound.",
@@ -53,7 +50,7 @@ export const featuredMusic = [
     title: "Chittiyaan Kalaiyaan",
     movie: "Roy",
     year: 2015,
-    thumbnail: "/imgs/img2.jpg",
+    thumbnail: "/public/iconicMusic/img5.jpg",
     youtubeId: "zpsVpnvFfZQ",
     description:
       "An upbeat dance number that topped the charts for weeks after its release.",
@@ -63,7 +60,7 @@ export const featuredMusic = [
     title: "OMG - Oh My God!",
     movie: "Satyameva Jayate 2",
     year: 2021,
-    thumbnail: "/imgs/img3.jpg",
+    thumbnail: "/public/iconicMusic/img4.jpg",
     youtubeId: "3wZUjGqATEQ",
     description:
       "A high-energy track that combines traditional beats with modern music production.",
@@ -73,10 +70,30 @@ export const featuredMusic = [
     title: "Love Dose",
     movie: "Desi Kalakaar",
     year: 2014,
-    thumbnail: "/imgs/img4.jpg",
+    thumbnail: "/public/iconicMusic/img4.jpg",
     youtubeId: "_iFrDMArBDg",
     description:
       "A romantic track that showcases Harmeet's versatility as a music composer.",
+  },
+  {
+    id: 5,
+    title: "Cham Cham",
+    movie: "Baaghi",
+    year: 2016,
+    thumbnail: "/public/iconicMusic/img2.jpg",
+    youtubeId: "f6vY6tYuH6I",
+    description:
+      "A melodious rain-themed song that highlights Harmeet Meet's composition skills with its catchy rhythm and memorable tune.",
+  },
+  {
+    id: 6,
+    title: "Kinna Sona",
+    movie: "Marjaavaan",
+    year: 2019,
+    thumbnail: "/public/iconicMusic/img1.jpg",
+    youtubeId: "A3qKucS_gDU",
+    description:
+      "A soulful romantic ballad that showcases Harmeet Meet's emotional depth and lyrical sensibility with its heartfelt composition.",
   },
 ];
 
@@ -160,38 +177,15 @@ export const awards = [
 ];
 
 export const galleryImages = {
-  concerts: [
-    { id: 1, src: "/imgs/img1.jpg", title: "Live at Mumbai, 2022" },
-    { id: 2, src: "/imgs/img2.jpg", title: "International Tour, London 2021" },
-    {
-      id: 3,
-      src: "/imgs/img3.jpg",
-      title: "Music Festival Performance, Delhi 2020",
-    },
-    { id: 4, src: "/imgs/img4.jpg", title: "New Year Concert, Goa 2023" },
-    { id: 5, src: "/imgs/img5.jpg", title: "University Tour, Pune 2019" },
-    { id: 6, src: "/imgs/img6.jpg", title: "Corporate Event, Bangalore 2022" },
-  ],
-  studio: [
-    { id: 1, src: "/imgs/img7.jpg", title: 'Recording Session for "OMG"' },
-    { id: 2, src: "/imgs/img1.jpg", title: "Composing at Personal Studio" },
-    { id: 3, src: "/imgs/img2.jpg", title: "Collaboration with Neha Kakkar" },
-    { id: 4, src: "/imgs/img3.jpg", title: "Music Production Setup" },
-    { id: 5, src: "/imgs/img4.jpg", title: "Behind the Scenes - Song Writing" },
-  ],
-  backstage: [
-    {
-      id: 1,
-      src: "/imgs/img5.jpg",
-      title: "Preparing for Stage Performance",
-    },
-    { id: 2, src: "/imgs/img6.jpg", title: "Meet & Greet with Fans, Delhi" },
-    { id: 3, src: "/imgs/img7.jpg", title: "With Team Before Concert" },
-    {
-      id: 4,
-      src: "/imgs/img1.jpg",
-      title: "Celebrity Interaction at Award Show",
-    },
+  images: [
+    { id: 2, src: "/HImgs/img2.jpg", title: "International Tour, London 2021" },
+    { id: 1, src: "/HImgs/img1.jpg", title: "Live at Mumbai, 2022" },
+    { id: 3, src: "/HImgs/img3.jpg", title: "Recording Session, 2020" },
+    { id: 4, src: "/HImgs/img4.jpg", title: "Award Ceremony, 2019" },
+    { id: 5, src: "/HImgs/img5.jpg", title: "Collaboration with Artists, 2018" },
+    { id: 7, src: "/HImgs/img7.jpg", title: "Behind the Scenes, 2016" },
+    { id: 6, src: "/HImgs/img6.jpg", title: "Music Festival Performance, 2017" },
+    { id: 8, src: "/HImgs/img8.webp", title: "Fan Meet and Greet, 2015" },
   ],
 };
 

@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 import { FaPlay, FaSpotify, FaYoutube, FaChevronDown, FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 import { fadeIn, staggerContainer, textVariant } from '../constants/motion';
 import { featuredMusic } from '../constants/data';
-import { ImageContainer } from '../components/ui';
+import { ImageContainer, VisualGallery } from '../components/ui';
 import { FlipWords } from "../components/ui/FlipWords";
+import HarryOm from '../components/ui/HarryOm';
 
 
-const words = ["Composer", "Performer"," Innovator", "Visionary", "Legend", "Icon", "Maestro"];
+const words = ["Composer", "Performer", " Innovator", "Visionary", "Legend", "Icon", "Maestro"];
 
 const sectionTitle = (main, accent) => (
   <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-playfair text-white mb-6">
@@ -104,6 +105,9 @@ const HomePage = () => {
       {/* Featured Music Section */}
       <section id="music" className="py-20 bg-zinc-950">
         <div className="mx-auto max-w-screen-xl px-6">
+          <HarryOm />
+
+
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"
@@ -196,12 +200,12 @@ const HomePage = () => {
               className="relative"
             >
               <ImageContainer
-                src="/imgs/img2.jpg"
+                src="/public/HImgs/img8.webp"
                 alt="Harmeet Meet"
                 aspectRatio="aspect-square"
                 hover={true}
                 borderRadius="rounded-lg"
-                className="shadow-xl shadow-amber-400/10"
+                className=""
                 overlay="bg-gradient-to-t from-black via-black/70 to-transparent"
               >
                 <div className="p-8 absolute bottom-0 w-full">
@@ -225,40 +229,89 @@ const HomePage = () => {
           >
             {sectionTitle('Awards &', 'Recognition')}
             {sectionSubtitle('Celebrating excellence in musical innovation')}
+
             <motion.div
               variants={fadeIn('up', 0.5)}
-              className="flex flex-wrap justify-center gap-8 mt-12"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12"
             >
-              {([
-                { name: 'Filmfare Award', category: 'Best Music Director', year: '2020' },
-                { name: 'IIFA Award', category: 'Best Music Album', year: '2019' },
-                { name: 'Mirchi Music Award', category: 'Song of the Year', year: '2021' }
-              ]).map((award, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeIn('up', 0.2 * (index + 1))}
-                  className="w-64 h-64 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl p-6 flex flex-col items-center justify-center text-center transform transition-transform hover:scale-105"
-                >
-                  <div className="w-16 h-16 mb-4 bg-amber-400/10 rounded-full flex items-center justify-center overflow-hidden">
-                    <ImageContainer
-                      src="/imgs/img5.jpg"
-                      alt={`Award ${index + 1}`}
-                      className="w-12 h-12"
-                      borderRadius="rounded-full"
-                    />
+              <motion.div
+                variants={fadeIn('up', 0.2)}
+                className="bg-gradient-to-b from-zinc-800/50 to-zinc-900 rounded-lg overflow-hidden"
+              >
+                <div className="relative aspect-square overflow-hidden">
+                  <img
+                    src="/public/awards/img8.jpg"
+                    alt="IIFA Award"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-4 w-full">
+                    <h3 className="text-xl font-bold text-white">IIFA Award</h3>
+                    <p className="text-amber-400">Best Music Album</p>
+                    <p className="text-gray-300 text-sm">2015</p>
                   </div>
-                  <h3 className="text-white font-playfair text-lg mb-2">{award.name}</h3>
-                  <p className="text-amber-400 mb-2">{award.category}</p>
-                  <p className="text-gray-400 text-sm">{award.year}</p>
-                </motion.div>
-              ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={fadeIn('up', 0.4)}
+                className="bg-gradient-to-b from-zinc-800/50 to-zinc-900 rounded-lg overflow-hidden"
+              >
+                <div className="relative aspect-square overflow-hidden">
+                  <img
+                    src="/public/awards/img6.webp"
+                    alt="7th Mirchi Music Awards"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-4 w-full">
+                    <h3 className="text-xl font-bold text-white">7th Mirchi Music Awards</h3>
+                    <p className="text-amber-400">Best Song Producer</p>
+                    <p className="text-gray-300 text-sm">2015</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={fadeIn('up', 0.6)}
+                className="bg-gradient-to-b from-zinc-800/50 to-zinc-900 rounded-lg overflow-hidden"
+              >
+                <div className="relative aspect-square overflow-hidden">
+                  <img
+                    src="/public/awards/img5.jpg"
+                    alt="Star Guild Awards"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-4 w-full">
+                    <h3 className="text-xl font-bold text-white">Star Guild Awards</h3>
+                    <p className="text-amber-400">Best Music Direction</p>
+                    <p className="text-gray-300 text-sm">2015</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={fadeIn('up', 0.8)}
+                className="bg-gradient-to-b from-zinc-800/50 to-zinc-900 rounded-lg overflow-hidden"
+              >
+                <div className="relative aspect-square overflow-hidden">
+                  <img
+                    src="/public/awards/img4.jpg"
+                    alt="TOIFA"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-4 w-full">
+                    <h3 className="text-xl font-bold text-white">TOIFA</h3>
+                    <p className="text-amber-400">Best Music Album</p>
+                    <p className="text-gray-300 text-sm">2016</p>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
-            <motion.div
-              variants={fadeIn('up', 0.8)}
-              className="text-center mt-12"
-            >
-              {buttonOutline('/awards', 'View All Accolades')}
-            </motion.div>
+
+
           </motion.div>
         </div>
       </section>
@@ -267,7 +320,7 @@ const HomePage = () => {
       <section id="impact" className="py-20 bg-zinc-900 relative">
         <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
           <ImageContainer
-            src="/imgs/img4.jpg"
+            src="/public/HImgs/img19.png"
             alt="Impact background"
             className="h-full"
             aspectRatio=""
@@ -309,48 +362,7 @@ const HomePage = () => {
       </section>
 
       {/* Gallery Preview */}
-      <section id="gallery" className="py-20 bg-zinc-950">
-        <div className="mx-auto max-w-screen-xl px-6">
-          <motion.div
-            variants={staggerContainer(0.1, 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
-          >
-            {sectionTitle('Visual', 'Gallery')}
-            <motion.div
-              variants={fadeIn('up', 0.4)}
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 mt-12"
-            >
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeIn('up', 0.1 * (index + 1))}
-                  className="group relative aspect-square overflow-hidden rounded cursor-pointer"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-4">
-                      <h4 className="text-white font-playfair text-lg">Gallery Image {index + 1}</h4>
-                      <p className="text-amber-400">Concert Performance</p>
-                    </div>
-                  </div>
-                  <ImageContainer
-                    src={`/imgs/img${(index % 7) + 1}.jpg`}
-                    alt={`Gallery Image ${index + 1}`}
-                    hover={true}
-                  />
-                </motion.div>
-              ))}
-            </motion.div>
-            <motion.div
-              variants={fadeIn('up', 0.8)}
-              className="text-center mt-12"
-            >
-              {buttonOutline('/gallery', 'View Full Gallery')}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      <VisualGallery />
     </motion.div>
   );
 };

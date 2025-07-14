@@ -107,7 +107,7 @@ const Footer = () => {
               <li>
                 <a href="#" className="group flex items-center">
                   <div className="w-16 h-16 bg-zinc-900 mr-3 overflow-hidden flex-shrink-0 rounded">
-                    <div className="w-full h-full bg-[url('/baby-doll-thumb.jpg')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500"></div>
+                    <div className="w-full h-full bg-[url('/public/iconicMusic/img6.jpg')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500"></div>
                   </div>
                   <div>
                     <h6 className="text-white font-medium group-hover:text-amber-400 transition-colors">Baby Doll</h6>
@@ -118,7 +118,7 @@ const Footer = () => {
               <li>
                 <a href="#" className="group flex items-center">
                   <div className="w-16 h-16 bg-zinc-900 mr-3 overflow-hidden flex-shrink-0 rounded">
-                    <div className="w-full h-full bg-[url('/chittiyaan-kalaiyaan-thumb.jpg')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500"></div>
+                    <div className="w-full h-full bg-[url('/public/iconicMusic/img5.jpg')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500"></div>
                   </div>
                   <div>
                     <h6 className="text-white font-medium group-hover:text-amber-400 transition-colors">Chittiyaan Kalaiyaan</h6>
