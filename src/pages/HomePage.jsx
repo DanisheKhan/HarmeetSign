@@ -10,23 +10,23 @@ import HarryOm from '../components/ui/HarryOm';
 const words = ["Composer", "Performer", " Innovator", "Visionary", "Legend", "Icon", "Maestro"];
 
 const sectionTitle = (main, accent) => (
-  <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-playfair text-white mb-6">
+  <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-playfair text-white mb-4 sm:mb-6">
     {main} <span className="text-amber-400">{accent}</span>
   </h2>
 );
 
 const sectionSubtitle = (text) => (
-  <p className="text-xl md:text-2xl font-merriweather text-amber-400 mb-12 text-center max-w-3xl mx-auto">{text}</p>
+  <p className="text-lg sm:text-xl md:text-2xl font-merriweather text-amber-400 mb-8 sm:mb-12 text-center max-w-3xl mx-auto">{text}</p>
 );
 
 const buttonPrimary = (href, text) => (
-  <a href={href} className="px-8 py-3 bg-amber-400 text-zinc-950 font-medium rounded hover:bg-amber-300 transition-colors duration-300 inline-block">
+  <a href={href} className="px-6 sm:px-8 py-2.5 sm:py-3 bg-amber-400 text-zinc-950 font-medium rounded hover:bg-amber-300 transition-colors duration-300 inline-block text-sm sm:text-base">
     {text}
   </a>
 );
 
 const buttonOutline = (href, text) => (
-  <a href={href} className="px-6 py-3 border-2 border-amber-400 text-amber-400 font-medium rounded hover:bg-amber-400 hover:text-zinc-950 transition-all duration-300 inline-block">
+  <a href={href} className="px-5 sm:px-6 py-2.5 sm:py-3 border-2 border-amber-400 text-amber-400 font-medium rounded hover:bg-amber-400 hover:text-zinc-950 transition-all duration-300 inline-block text-sm sm:text-base">
     {text}
   </a>
 );
@@ -71,18 +71,18 @@ const HomePage = () => {
 
           <motion.h1
             variants={textVariant(0.2)}
-            className="text-white text-5xl md:text-6xl lg:text-7xl font-playfair mb-6 tracking-tight"
+            className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair mb-4 sm:mb-6 tracking-tight"
           >
             <span className="font-light">Harmeet</span> <span className="text-amber-400">Meet</span>
           </motion.h1>
 
-          <motion.div className="w-24 h-1 bg-amber-400 mx-auto mb-6"></motion.div>
+          <motion.div className="w-16 sm:w-24 h-1 bg-amber-400 mx-auto mb-4 sm:mb-6"></motion.div>
 
           <motion.p
             variants={textVariant(0.4)}
-            className="text-xl md:text-2xl font-merriweather text-gray-200 max-w-2xl mx-auto mb-12"
+            className="text-lg sm:text-xl md:text-2xl font-merriweather text-gray-200 max-w-2xl mx-auto mb-8 sm:mb-12"
           >
-            <div >
+            <div>
               <FlipWords words={words} />
             </div>
           </motion.p>
@@ -116,14 +116,14 @@ const HomePage = () => {
           >
             {sectionTitle('Iconic', 'Music')}
             {sectionSubtitle('Chart-topping tracks that defined the sound of a generation')}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12">
               {featuredMusic.map((track, index) => (
                 <motion.div
                   key={track.id}
                   variants={fadeIn('up', 0.2 * (index + 1))}
-                  className="bg-zinc-900 rounded-lg p-6 flex flex-col"
+                  className="bg-zinc-900 rounded-lg p-4 sm:p-6 flex flex-col"
                 >
-                  <div className="relative mb-4 group cursor-pointer">
+                  <div className="relative mb-3 sm:mb-4 group cursor-pointer">
                     <ImageContainer
                       src={track.thumbnail}
                       alt={track.title}
@@ -131,18 +131,18 @@ const HomePage = () => {
                       hover={true}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <FaPlay className="text-amber-400 text-4xl" />
+                      <FaPlay className="text-amber-400 text-3xl sm:text-4xl" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-playfair text-white mb-1">{track.title}</h3>
-                  <p className="text-sm text-gray-400 mb-2">{track.movie} ({track.year})</p>
-                  <p className="text-gray-300 text-sm mb-4 flex-grow">{track.description}</p>
+                  <h3 className="text-lg sm:text-xl font-playfair text-white mb-1">{track.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-400 mb-2">{track.movie} ({track.year})</p>
+                  <p className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">{track.description}</p>
                   <div className="flex space-x-3 mt-auto">
                     <a href={`https://www.youtube.com/watch?v=${track.youtubeId}`} target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-white transition-colors">
-                      <FaYoutube className="text-xl" />
+                      <FaYoutube className="text-lg sm:text-xl" />
                     </a>
                     <a href="#" className="text-amber-400 hover:text-white transition-colors">
-                      <FaSpotify className="text-xl" />
+                      <FaSpotify className="text-lg sm:text-xl" />
                     </a>
                   </div>
                 </motion.div>
@@ -159,9 +159,9 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-zinc-950 relative overflow-hidden">
+      <section id="about" className="py-12 sm:py-16 md:py-20 bg-zinc-950 relative overflow-hidden">
         {/* Enhanced background with stronger gradient overlay for better text visibility */}
-        <div className="absolute inset-0  z-0"></div>
+        <div className="absolute inset-0 z-0"></div>
         {/* Background image with reduced opacity for less distraction */}
         <div className="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none select-none z-0">
           <img
@@ -170,26 +170,30 @@ const HomePage = () => {
           />
         </div>
         {/* Content container with improved spacing */}
-        <div className="mx-auto max-w-screen-xl px-6 py-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="mx-auto max-w-screen-xl px-4 sm:px-6 py-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               variants={fadeIn('left', 0.3)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="bg-zinc-950/80 p-6 rounded-lg backdrop-blur-sm"
+              className="bg-zinc-950/80 p-4 sm:p-6 rounded-lg backdrop-blur-sm"
             >
-              {sectionTitle('The', 'Journey')}
-              <p className="text-gray-200 mb-6 text-lg">
+              <h2 className="text-center lg:text-left text-3xl md:text-4xl lg:text-5xl font-playfair text-white mb-4 sm:mb-6">
+                The <span className="text-amber-400">Journey</span>
+              </h2>
+              <p className="text-gray-200 mb-4 sm:mb-6 text-base sm:text-lg">
                 From the musical roots of Gwalior to the glamorous studios of Mumbai, Harmeet Meet's
                 journey is a testament to passion, perseverance, and musical innovation.
               </p>
-              <p className="text-gray-300 mb-8 text-lg">
+              <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg">
                 Educated at The Scindia School and later at Sydenham College, Mumbai,
                 his classical training combined with contemporary sensibilities has created a unique
                 musical identity that resonates across generations.
               </p>
-              {buttonPrimary('/about', 'Read Full Story')}
+              <div className="text-center lg:text-left">
+                {buttonPrimary('/about', 'Read Full Story')}
+              </div>
             </motion.div>
             <motion.div
               variants={fadeIn('right', 0.5)}
@@ -207,8 +211,8 @@ const HomePage = () => {
                 className=""
                 overlay="bg-gradient-to-t from-black via-black/70 to-transparent"
               >
-                <div className="p-8 absolute bottom-0 w-full">
-                  <h3 className="text-2xl font-playfair text-white font-bold tracking-wide">Harmeet Meet</h3>
+                <div className="p-4 sm:p-8 absolute bottom-0 w-full">
+                  <h3 className="text-xl sm:text-2xl font-playfair text-white font-bold tracking-wide">Harmeet Meet</h3>
                   <p className="text-amber-400 font-medium">Music Director & Composer</p>
                 </div>
               </ImageContainer>
@@ -231,7 +235,7 @@ const HomePage = () => {
 
             <motion.div
               variants={fadeIn('up', 0.5)}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-12"
             >
               <motion.div
                 variants={fadeIn('up', 0.2)}
@@ -316,7 +320,7 @@ const HomePage = () => {
       </section>
 
       {/* Social Impact Section */}
-      <section id="impact" className="py-20 bg-zinc-900 relative">
+      <section id="impact" className="py-12 sm:py-16 md:py-20 bg-zinc-900 relative">
         <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
           <ImageContainer
             src="/public/HImgs/img19.png"
@@ -325,7 +329,7 @@ const HomePage = () => {
             aspectRatio=""
           />
         </div>
-        <div className="mx-auto max-w-screen-xl px-6 relative z-10">
+        <div className="mx-auto max-w-screen-xl px-4 sm:px-6 relative z-10">
           <motion.div
             variants={staggerContainer(0.1, 0.2)}
             initial="hidden"
@@ -336,7 +340,7 @@ const HomePage = () => {
             {sectionTitle('Social', 'Impact')}
             <motion.p
               variants={textVariant(0.4)}
-              className="text-gray-300 mb-8 text-lg"
+              className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg"
             >
               Through the WeCare Initiative, Harmeet Meet has dedicated his platform to raising awareness
               about mental health issues in the entertainment industry, creating a safe space for artists
@@ -344,14 +348,14 @@ const HomePage = () => {
             </motion.p>
             <motion.div
               variants={fadeIn('up', 0.6)}
-              className="p-6 bg-zinc-800/80 backdrop-blur-sm rounded-lg mb-8"
+              className="p-4 sm:p-6 bg-zinc-800/80 backdrop-blur-sm rounded-lg mb-6 sm:mb-8"
             >
-              <blockquote className="text-lg text-zinc-200 italic">
+              <blockquote className="text-base sm:text-lg text-zinc-200 italic">
                 "Music has the power to heal minds and transform lives. The WeCare Initiative is my way of
                 giving back to an industry that has given me so much, by creating awareness and support systems
                 for mental health in our creative community."
               </blockquote>
-              <div className="mt-4 text-amber-400">— Harmeet Meet</div>
+              <div className="mt-3 sm:mt-4 text-amber-400">— Harmeet Meet</div>
             </motion.div>
             <motion.div variants={fadeIn('up', 0.8)}>
               {buttonOutline('/impact', 'Learn About Our Initiative')}

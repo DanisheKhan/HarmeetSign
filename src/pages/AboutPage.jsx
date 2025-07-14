@@ -106,7 +106,7 @@ const AboutPage = () => {
       </section>
 
       {/* Journey Section */}
-      <section className="py-16 md:py-24 bg-zinc-900 relative overflow-hidden">
+      <section className="py-16 md:py-24  relative overflow-hidden">
         <div className="spotlight"></div>
         <div className="mx-auto max-w-screen-xl px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -351,7 +351,7 @@ const AboutPage = () => {
               variants={textVariant(0.1)}
               className="text-3xl md:text-4xl font-playfair mb-4"
             >
-              Social <span className="text-amber-400">Impact</span>
+              <span className="text-amber-400"> Social Impact</span>
             </motion.h2>
             <motion.div
               variants={fadeIn('up', 0.2)}
@@ -381,13 +381,13 @@ const AboutPage = () => {
               viewport={{ once: true }}
             >
               {/* Social Impact image */}
-              <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
+              <div className="h-96  overflow-hidden justify-center  flex ">
                 <ImageContainer
                   src="/public/HImgs/img18.png"
 
                   alt="Harmeet Singh's Social Impact"
-                  aspectRatio="aspect-auto"
-                  className="h-full object-top"
+                  // aspectRatio="aspect-auto"
+                  className="h-full"
                   hover={true}
                 />
               </div>
