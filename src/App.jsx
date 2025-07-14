@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div className="App overflow-x-hidden">
       <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -37,7 +37,7 @@ function App() {
           } />
         </Route>
       </Routes>
-    </>
+    </div>
   )
 }
 
